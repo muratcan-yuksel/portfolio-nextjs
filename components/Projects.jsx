@@ -36,14 +36,14 @@ const Projects = () => {
               />
             </motion.div>
             <div className="space-y-10 px-0 md:px-10 max-w-6xl">
-              <h4 className="text-4xl font-semibold text-center">
+              <h4 className=" text-2xl md:text-4xl font-semibold text-center">
                 <span className="underline decoration-[#F7Ab0A]">
                   {" "}
                   Case study {index + 1} of {projects.length}:{" "}
                 </span>{" "}
                 some clone{" "}
               </h4>
-              <p className="text-lg text-center md:text-left">
+              <p className=" text-md md:text-lg text-center md:text-left">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
                 aut adipisci debitis necessitatibus beatae consectetur explicabo
                 error placeat, perferendis animi, nisi consequuntur libero, sit

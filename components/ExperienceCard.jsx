@@ -44,18 +44,6 @@ const ExperienceCard = () => {
             summary points summary points summary points summary points summary
             points summary points summary points
           </li>
-          <li>
-            summary points summary points summary points summary points summary
-            points summary points summary points
-          </li>
-          <li>
-            summary points summary points summary points summary points summary
-            points summary points summary points
-          </li>
-          <li>
-            summary points summary points summary points summary points summary
-            points summary points summary points
-          </li>
         </ul>
       </div>
     </article>
