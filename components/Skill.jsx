@@ -3,14 +3,14 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import circle from "../assets/circle.svg";
 
-const Skill = ({ directionLeft }) => {
+const Skill = () => {
   return (
     <div className=" cursor-pointer m-2 md:m-10">
       {/* this animation is problematic on mobile */}
       <motion.div
-        initial={{ x: directionLeft ? -200 : 200, opacity: 0 }}
-        transition={{ duration: 1 }}
-        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0 }}
+        transition={{ duration: 1.7 }}
+        whileInView={{ opacity: 1 }}
       >
         <Image
           src={circle}
