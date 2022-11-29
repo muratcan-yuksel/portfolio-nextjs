@@ -5,7 +5,7 @@ import circle from "../assets/circle.svg";
 
 const Skill = ({ directionLeft }) => {
   return (
-    <div className="group relative flex cursor-pointer m-10">
+    <div className=" cursor-pointer m-2 md:m-10">
       {/* this animation is problematic on mobile */}
       <motion.div
         initial={{ x: directionLeft ? -200 : 200, opacity: 0 }}
