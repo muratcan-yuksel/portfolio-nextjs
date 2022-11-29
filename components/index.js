@@ -1,0 +1,10 @@
+export { default as Header } from "./Header.jsx";
+export { default as Hero } from "./Hero";
+export { default as About } from "./About.jsx";
+export { default as BackgroundCircles } from "./BackgroundCircles";
+export { default as ContactMe } from "./ContactMe.jsx";
+export { default as ExperienceCard } from "./ExperienceCard";
+export { default as Projects } from "./Projects.jsx";
+export { default as Skill } from "./Skill";
+export { default as Skills } from "./Skills.jsx";
+export { default as WorkExperience } from "./WorkExperience";

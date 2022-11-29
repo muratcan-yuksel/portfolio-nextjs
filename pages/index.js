@@ -1,6 +1,18 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import {
+  About,
+  BackgroundCircles,
+  ContactMe,
+  ExperienceCard,
+  Header,
+  Hero,
+  Projects,
+  Skill,
+  Skills,
+  WorkExperience,
+} from "../components";
 
 export default function Home() {
   return (
@@ -18,7 +30,26 @@ export default function Home() {
       <section id="hero" className="snap-center">
         <Hero />
       </section>
-
+      {/*About */}
+      <section id="about" className="snap-center">
+        <About />
+      </section>
+      {/* Experience */}
+      <section id="experience" className="snap-center">
+        <WorkExperience />
+      </section>
+      {/* Skills */}
+      <section id="skills" className="snap-start">
+        <Skills />
+      </section>
+      {/* Projects */}
+      <section id="projects" className="snap-start">
+        <Projects />
+      </section>
+      {/* Contact Me */}
+      <section id="contact" className="snap-start">
+        <ContactMe />
+      </section>
       {/* sticky footer */}
 
       {/* <Link href="#hero">
