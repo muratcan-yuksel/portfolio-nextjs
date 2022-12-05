@@ -13,8 +13,10 @@ import {
   Skills,
   WorkExperience,
 } from "../components";
+//sanity client from lib folder
+import { client } from "../lib/client";
 
-export default function Home() {
+export default function Home({ experience }) {
   return (
     <div
       //  tailwind scrollbar definitions are here
@@ -60,6 +62,19 @@ export default function Home() {
         </div>
       </footer>
       </Link> */}
+      {console.log(experience)}
     </div>
   );
 }
+
+export const getServerSideProps = async () => {
+  const query = '*[_type == "experience"]';
+  const experience = await client.fetch(query);
+
+  // const bannerQuery = '*[_type == "banner"]';
+  // const bannerData = await client.fetch(bannerQuery);
+
+  return {
+    props: { experience },
+  };
+};
