@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const Header = () => {
   return (
-    <header className="sticky mx-10 top-2 flex flex-row items-start justify-between max-w-7xl  z-20 xl:items-center">
+    <header className="sticky mx-10 top-2 flex flex-row items-center justify-between z-20 ">
       <motion.div
         initial={{ opacity: 0, x: -500, scale: 0.5 }}
         animate={{ opacity: 1, x: 0, scale: 1 }}
@@ -30,7 +30,7 @@ const Header = () => {
         />
       </motion.div>{" "}
       <Link href="/#contact">
-        <motion.div
+        <div
           initial={{ opacity: 0, x: 500, scale: 0.5 }}
           animate={{ opacity: 1, x: 0, scale: 1 }}
           transition={{ duration: 1.5 }}
@@ -44,10 +44,10 @@ const Header = () => {
             fgColor="gray"
             bgColor="transparent"
           /> */}
-          <p className="uppercase  underline text-sm text-gray-400">
+          <p className="uppercase  underline underline-offset-4 text-sm text-gray-400">
             Get In Touch
           </p>
-        </motion.div>
+        </div>
       </Link>{" "}
     </header>
   );
