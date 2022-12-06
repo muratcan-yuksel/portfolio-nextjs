@@ -2,10 +2,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import circle from "../assets/circle.svg";
+import { urlFor } from "../lib/client";
 
-const Skill = () => {
+const Skill = ({ skill }) => {
   return (
-    <div className=" cursor-pointer m-2 md:m-10">
+    <div className=" cursor-pointer m-2 md:m-5 lg:m-7">
       {/* this animation is problematic on mobile */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -13,9 +14,11 @@ const Skill = () => {
         whileInView={{ opacity: 1 }}
       >
         <Image
-          src={circle}
+          src={urlFor(skill.image).url()}
+          width={200}
+          height={200}
           alt=""
-          className="rounded-full border border-gray-500 object-cover w-24 h-24 xl:w-32 xl:h-32 filter group-hover:grayscale transition duration-300 ease-in-out"
+          className="rounded-full border border-gray-500 object-contain w-20 h-20 sm:w-24 sm:h-24 xl:w-32 xl:h-32 filter group-hover:grayscale transition duration-300 ease-in-out"
         />
       </motion.div>
       {/* here I omit the skill percentage section, because it's stupid */}

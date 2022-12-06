@@ -9,6 +9,7 @@ const Skills = ({ data }) => {
         Skills
       </h3>
       <div className="flex flex-wrap justify-center">
+        {/* <Skill />
         <Skill />
         <Skill />
         <Skill />
@@ -22,10 +23,16 @@ const Skills = ({ data }) => {
         <Skill />
         <Skill />
         <Skill />
-        <Skill />
-        <Skill />
+        <Skill /> */}
         {console.log(data)}
-        <img src={urlFor(data[0].image).width(200).url()} />{" "}
+        {data.map((skill) =>
+          //had to do this because of a bug in sanity
+          //deletes the invisible NextJS skill
+          skill._id != "a3bfdc4c-a557-409f-9fe2-ff00928a1ace" ? (
+            <Skill key={skill._id} skill={skill} />
+          ) : null
+        )}
+        {/* <img src={urlFor(data[0].image).width(200).url()} />{" "} */}
       </div>
     </div>
   );
