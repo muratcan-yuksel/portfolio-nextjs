@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import ExperienceCard from "./ExperienceCard";
 
-const WorkExperience = () => {
+const WorkExperience = ({ data }) => {
   return (
     <div style={{ paddingTop: "100px" }}>
       <motion.div

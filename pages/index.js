@@ -16,7 +16,7 @@ import {
 //sanity client from lib folder
 import { client } from "../lib/client";
 
-export default function Home({ experience }) {
+export default function Home({ experience, pageInfoData, skills }) {
   return (
     <div
       //  tailwind scrollbar definitions are here
@@ -34,15 +34,15 @@ export default function Home({ experience }) {
       </section>
       {/*About */}
       <section id="about" className="snap-center">
-        <About />
+        <About data={pageInfoData} />
       </section>
       {/* Experience */}
       <section id="experience" className="snap-center">
-        <WorkExperience />
+        <WorkExperience data={experience} />
       </section>
       {/* Skills */}
       <section id="skills" className="snap-start">
-        <Skills />
+        <Skills data={skills} />
       </section>
       {/* Projects */}
       <section id="projects" className="snap-start">
@@ -71,10 +71,13 @@ export const getServerSideProps = async () => {
   const query = '*[_type == "experience"]';
   const experience = await client.fetch(query);
 
-  // const bannerQuery = '*[_type == "banner"]';
-  // const bannerData = await client.fetch(bannerQuery);
+  const pageInfoQuery = '*[_type == "pageInfo"]';
+  const pageInfoData = await client.fetch(pageInfoQuery);
+
+  const skillQuery = '*[_type == "skill"]';
+  const skills = await client.fetch(skillQuery);
 
   return {
-    props: { experience },
+    props: { experience, pageInfoData, skills },
   };
 };

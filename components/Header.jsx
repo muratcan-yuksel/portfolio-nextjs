@@ -14,19 +14,22 @@ const Header = () => {
       >
         {/* social icons */}
         <SocialIcon
-          url="https://twitter.com/codingsirius"
+          url="https://www.linkedin.com/in/murat-can-y%C3%BCksel-2b1347119/"
           fgColor="gray"
           bgColor="transparent"
+          target={"_blank"}
+        />{" "}
+        <SocialIcon
+          url="https://dev.to/muratcanyuksel"
+          fgColor="gray"
+          bgColor="transparent"
+          target={"_blank"}
         />{" "}
         <SocialIcon
           url="https://twitter.com/codingsirius"
           fgColor="gray"
           bgColor="transparent"
-        />{" "}
-        <SocialIcon
-          url="https://twitter.com/codingsirius"
-          fgColor="gray"
-          bgColor="transparent"
+          target={"_blank"}
         />
       </motion.div>{" "}
       <Link href="/#contact">

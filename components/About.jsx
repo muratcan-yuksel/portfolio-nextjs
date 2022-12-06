@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import ppImg from "../assets/pp.jpg";
 import Image from "next/image";
 
-const About = () => {
+const About = ({ data }) => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -37,12 +37,9 @@ const About = () => {
           <span className="underline decoration-[#F7Ab0A]/50">little</span>{" "}
           background
         </h4>
-        <p className="text-sm">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, officia?
-          Illum corporis rem atque consectetur veritatis, aut sequi non quod
-          mollitia eum accusantium omnis. Quis laborum eos iste illo at!
-        </p>
+        <p className="text-sm">{data[0].backgroundInformation}</p>
       </div>
+      {console.log(data[0].backgroundInformation)}{" "}
     </motion.div>
   );
 };

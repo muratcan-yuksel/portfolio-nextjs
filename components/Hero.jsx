@@ -9,9 +9,9 @@ import Image from "next/image";
 const Hero = () => {
   const [text, count] = useTypewriter({
     words: [
-      "Hi, my name is Murat Can Yüksel",
-      "Web Developer",
-      "Full Stack Developer",
+      "Hi, the name is Murat Can Yüksel",
+      "Guy who develops web3 applications",
+      "Full stack web2 applications ",
     ],
     loop: true,
     delaySpeed: 2000,
@@ -26,7 +26,7 @@ const Hero = () => {
       />
       <div className="z-20">
         <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px]">
-          Blockchain developer
+          Full-stack Web3 Developer
         </h2>
         <div className="">
           <h1 className="text-5xl lg:text-6xl font-semibold px-10">
