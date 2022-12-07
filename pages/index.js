@@ -54,14 +54,14 @@ export default function Home({ experience, pageInfoData, skills, projects }) {
       </section>
       {/* sticky footer */}
 
-      {/* <Link href="#hero">
-      <footer className="sticky bottom-5 w-full cursor-pointer">
-        <div className="flex items-center justify-center">
-      an image here
-          <img src="" alt="" />
-        </div>
-      </footer>
-      </Link> */}
+      <Link href="#hero">
+        <footer className="sticky bottom-5 w-full cursor-pointer">
+          <div className="flex items-center justify-center">
+            Made by Murat Can Yüksel with love
+            {/* <img src="" alt="" /> */}
+          </div>
+        </footer>
+      </Link>
       {console.log(experience)}
     </div>
   );
