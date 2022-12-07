@@ -2,10 +2,29 @@
 import React from "react";
 import { PhoneIcon, EnvelopeIcon, MapPinIcon } from "@heroicons/react/24/solid";
 import { useForm, SubmitHandler } from "react-hook-form";
+import UseEmail from "./UseEmail";
 
 const ContactMe = () => {
   const { register, handleSubmit } = useForm();
-  const onSubmit = (formData) => console.log(formData);
+  const onSubmit = (formData) => {
+    console.log(formData);
+    sendExample(formData);
+    console.log(formData.message.toString());
+  };
+  //send email with herotofu
+  const { loading, submitted, error, sendEmail } = UseEmail(
+    "https://public.herotofu.com/v1/ffa45330-5ffc-11ed-b82c-5d75eaa7ccff"
+  );
+
+  const sendExample = ({ name, email, subject, message }) => {
+    // Can be any data, static and dynamic
+    sendEmail({
+      userName: name,
+      userMail: email,
+      subject: subject,
+      message: message,
+    });
+  };
   return (
     <div className="h-screen flex flex-col">
       {" "}
@@ -62,8 +81,6 @@ const ContactMe = () => {
             {...register("message")}
             placeholder="Message"
             className="contactInput"
-            name=""
-            id=""
           />
           <button
             type="submit"
@@ -72,6 +89,11 @@ const ContactMe = () => {
             Submit
           </button>
         </form>
+        <div className="w-screen flex justify-center text-xl">
+          {submitted && "Done, email was sent!"}
+          {error ? `Unexpected error: ${error}` : null}
+          {loading && "Email is being sent now..."}
+        </div>
       </div>
     </div>
   );
