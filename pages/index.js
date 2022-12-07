@@ -24,7 +24,7 @@ export default function Home({ experience, pageInfoData, skills }) {
     scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80"
     >
       <Head>
-        <title>NextJS Portfolio</title>
+        <title>Murat Can Yüksel - Full Stack Web3 Developer</title>
       </Head>
       <Header />
 
@@ -37,7 +37,7 @@ export default function Home({ experience, pageInfoData, skills }) {
         <About data={pageInfoData} />
       </section>
       {/* Experience */}
-      <section id="experience" className="snap-center">
+      <section id="experience" className="snap-end">
         <WorkExperience data={experience} />
       </section>
       {/* Skills */}

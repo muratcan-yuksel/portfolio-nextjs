@@ -9,25 +9,28 @@ const WorkExperience = ({ data }) => {
   );
   console.log(sortedData);
   return (
-    <div style={{ paddingTop: "100px" }}>
+    <div>
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1.5 }}
-        className="h-screen flex "
+        className="h-screen flex my-10 justify-center items-center"
       >
-        <div className="max-w-full flex flex-col">
-          <h3 className=" top-24 upercase tracking-[20px] text-gray-500 text-2xl text-center">
+        <div className="flex flex-col max-w-full items-center  ">
+          <h3 className=" upercase tracking-[20px] text-gray-500 text-2xl text-center">
             Experience
           </h3>
+
+          {/* <div className="max-w-full flex flex-col"> */}
           <div className="w-full  flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory  scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/50">
             {/* <ExperienceCard data={data} />
             <ExperienceCard data={data} />
-            <ExperienceCard data={data} /> */}
+          <ExperienceCard data={data} /> */}
             {sortedData.map((experience) => (
               <ExperienceCard key={experience._id} data={experience} />
             ))}
           </div>
+          {/* </div> */}
         </div>
       </motion.div>
     </div>
