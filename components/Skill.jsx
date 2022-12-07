@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import circle from "../assets/circle.svg";
 import { urlFor } from "../lib/client";
 
 const Skill = ({ skill }) => {
