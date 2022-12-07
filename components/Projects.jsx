@@ -3,6 +3,7 @@ import pic from "../assets/pp.jpg";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { urlFor } from "../lib/client";
+import Link from "next/link";
 
 const Projects = ({ data }) => {
   const projects = [1, 2, 3, 4, 5];
@@ -50,6 +51,19 @@ const Projects = ({ data }) => {
               <p className=" text-md md:text-lg text-center md:text-left">
                 {project.summary}
               </p>
+              <div className="flex justify-evenly">
+                <Link target={"_blank"} href={project.linkToBuild}>
+                  <button className="heroButton">Live Demo </button>
+                </Link>{" "}
+                <Link href={project.linkToCode}>
+                  <button className="heroButton">Source Code </button>
+                </Link>{" "}
+                {project.linkToArticle && (
+                  <Link href={project.linkToArticle}>
+                    <button className="heroButton">Relevant Article </button>
+                  </Link>
+                )}
+              </div>
             </div>
           </div>
         ))}
