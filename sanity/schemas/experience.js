@@ -21,15 +21,16 @@ export default {
       title: "Company",
       type: "text",
     },
+    { name: "location", title: "Location", type: "string" },
     {
       name: "dateStarted",
       title: "Date Started",
-      type: "date",
+      type: "string",
     },
     {
       name: "dateEnded",
       title: "Date Ended",
-      type: "date",
+      type: "string",
     },
 
     {

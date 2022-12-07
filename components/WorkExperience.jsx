@@ -3,6 +3,11 @@ import { motion } from "framer-motion";
 import ExperienceCard from "./ExperienceCard";
 
 const WorkExperience = ({ data }) => {
+  //sort data by date
+  let sortedData = data.sort(
+    (a, b) => new Date(b.dateStarted) - new Date(a.dateStarted)
+  );
+  console.log(sortedData);
   return (
     <div style={{ paddingTop: "100px" }}>
       <motion.div
@@ -19,7 +24,7 @@ const WorkExperience = ({ data }) => {
             {/* <ExperienceCard data={data} />
             <ExperienceCard data={data} />
             <ExperienceCard data={data} /> */}
-            {data.map((experience) => (
+            {sortedData.map((experience) => (
               <ExperienceCard key={experience._id} data={experience} />
             ))}
           </div>
