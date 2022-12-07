@@ -14,6 +14,12 @@ const Header = () => {
       >
         {/* social icons */}
         <SocialIcon
+          url="https://github.com/muratcan-yuksel"
+          fgColor="gray"
+          bgColor="transparent"
+          target={"_blank"}
+        />{" "}
+        <SocialIcon
           url="https://www.linkedin.com/in/murat-can-y%C3%BCksel-2b1347119/"
           fgColor="gray"
           bgColor="transparent"

@@ -8,22 +8,7 @@ const Skills = ({ data }) => {
       <h3 className=" uppercase my-10 tracking-[20px] text-gray-500 text-2xl text-center">
         Skills
       </h3>
-      <div className="flex flex-wrap justify-center">
-        {/* <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill /> */}
+      <div className="flex flex-wrap justify-center 2xl:px-52">
         {console.log(data)}
         {data.map((skill) =>
           //had to do this because of a bug in sanity
