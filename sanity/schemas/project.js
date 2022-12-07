@@ -34,5 +34,7 @@ export default {
       title: "LinkToBuild",
       type: "url",
     },
+    { name: "linkToCode", title: "LinkToCode", type: "url" },
+    { name: "linkToArticle", title: "LinkToArticle", type: "url" },
   ],
 };
