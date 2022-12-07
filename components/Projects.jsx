@@ -2,9 +2,11 @@ import React from "react";
 import pic from "../assets/pp.jpg";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { urlFor } from "../lib/client";
 
-const Projects = () => {
+const Projects = ({ data }) => {
   const projects = [1, 2, 3, 4, 5];
+  console.log(data);
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -17,7 +19,7 @@ const Projects = () => {
       </h3>
       <div className="relative w-full flex overflow-x-scroll overflow-y-scroll snap-x snap-mandatory z-20   scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/50">
         {/* projects */}
-        {projects.map((project, index) => (
+        {data.map((project, index) => (
           <div
             key={project}
             className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen"
@@ -30,24 +32,23 @@ const Projects = () => {
             >
               {/* I added the style tag myself, should be changed later */}
               <Image
-                style={{ height: "200px", objectFit: "contain" }}
+                style={{ objectFit: "contain" }}
                 alt=""
-                src={pic}
+                src={urlFor(project.image).url()}
+                width={500}
+                height={200}
               />
             </motion.div>
             <div className="space-y-10 px-0 md:px-10 max-w-6xl">
               <h4 className=" text-2xl md:text-4xl font-semibold text-center">
                 <span className="underline decoration-[#F7Ab0A]">
                   {" "}
-                  Case study {index + 1} of {projects.length}:{" "}
+                  Case study {index + 1} of {data.length}:{" "}
                 </span>{" "}
-                some clone{" "}
+                {project.title}
               </h4>
               <p className=" text-md md:text-lg text-center md:text-left">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
-                aut adipisci debitis necessitatibus beatae consectetur explicabo
-                error placeat, perferendis animi, nisi consequuntur libero, sit
-                ipsum quod eum iusto possimus quo.
+                {project.summary}
               </p>
             </div>
           </div>
