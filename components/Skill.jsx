@@ -5,7 +5,7 @@ import { urlFor } from "../lib/client";
 
 const Skill = ({ skill }) => {
   return (
-    <div className=" cursor-pointer m-2 md:m-5 lg:m-7">
+    <div className=" cursor-pointer m-2 md:m-5 lg:m-7 flex flex-col items-center">
       {/* this animation is problematic on mobile */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -21,6 +21,7 @@ const Skill = ({ skill }) => {
         />
       </motion.div>
       {/* here I omit the skill percentage section, because it's stupid */}
+      <p className="my-2">{skill.title}</p>
     </div>
   );
 };
