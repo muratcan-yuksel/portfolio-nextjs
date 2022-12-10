@@ -4,7 +4,7 @@ import Skill from "./Skill";
 import { urlFor } from "../lib/client";
 const Skills = ({ data }) => {
   return (
-    <div className="h-screen  flex flex-col ">
+    <div className="h-screen  flex flex-col overflow-y-scroll ">
       <h3 className=" uppercase my-10 tracking-[20px] text-gray-500 text-2xl text-center">
         Skills
       </h3>
